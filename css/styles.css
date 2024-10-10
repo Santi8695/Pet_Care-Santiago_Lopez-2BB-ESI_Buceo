@@ -285,9 +285,10 @@ footer p {
     header nav ul li {
         display: flex;
         flex-direction: row;
-        padding: 12px 0;
+        padding: 4px 0;
         font-size: 22px;
         color: #fff;
+        gap: 4px;
     }
 
     header nav ul li:nth-child(-n + 6):hover a:hover{
@@ -299,8 +300,8 @@ footer p {
     }
 
     span svg.redes {
-        width: 64px;
-        height: 64px;
+        width: 32px;
+        height: 32px;
     }
 
     .burger-ico {
