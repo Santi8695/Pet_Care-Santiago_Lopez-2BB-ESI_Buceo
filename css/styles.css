@@ -7,7 +7,7 @@
     --color-claro: #FBF0DB;
     --color-intermedio: #919488;
     --color-oscuro: #000000;
-    --fuente-principal: 400 16px/20px "Poppins", sans-serif;
+    --fuente-principal: 400 16px/30px "Poppins", sans-serif;
     --fuente-general: 100 16px/20px "Losa", sans-serif;
 }
 
@@ -42,13 +42,31 @@ header nav ul {
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--color-claro);
     font: var(--fuente-principal);
     font-size: 1rem;
 }
 
+header nav ul li:nth-child(-n + 6):hover a:hover{
+    text-decoration: none;
+    background-color: var(--color-claro);
+    color: var(--color-primario);
+    padding: 8px;
+    transition: 0.2s ease-in-out;
+}
+
+span svg.redes {
+    width: 32px;
+    height: 32px;
+}
+
+.burger-ico {
+    display: none;
+    color: var(--color-claro);
+}
+
 .hero {
-    background-color: var(--color-primario-oscuro);
+    background-image: linear-gradient(to top, #a3977e, #A58132);
     min-height: 400px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -72,9 +90,10 @@ header nav ul li a {
 
 .heroInformacion h1 {
     color: var(--color-claro);
-    font-size: 7rem;
+    font-size: 6rem;
     text-align: left;
     margin: 16px 80px;
+    max-width: 800px;
 }
 
 .heroInformacion p {
@@ -86,13 +105,23 @@ header nav ul li a {
 
 .heroInformacion button {
     background-color: var(--color-terceario);
-    color: white;
+    color: var(--color-claro);
     height: 40px;
     width: 150px;
     border-radius: 20px;
     padding: 0 24px;
     border: none;
     margin: 16px 80px;
+}
+
+.heroInformacion button:hover {
+    background-color: var(--color-claro);
+    color: var(--color-terceario);
+    border: none;
+    margin: 16px 80px;
+    margin-bottom: 32px;
+    box-shadow: var(--color-terceario) 2px 8px;
+    transition: 0.2s ease-in-out;
 }
 
 .info {
@@ -131,11 +160,257 @@ svg {
 
 .info button {
     background-color: var(--color-terceario);
-    color: white;
+    color: var(--color-claro);
     height: 40px;
     width: 116px;
     border-radius: 20px;
     padding: 0 24px;
     border: none;
     margin: auto;
+}
+
+.info button:hover {
+    background-color: var(--color-claro);
+    color: var(--color-terceario);
+    box-shadow: var(--color-terceario) 2px 8px;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 8px;
+}
+
+footer {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: var(--color-terceario);
+}
+
+footer p {
+    text-align: center;
+    padding: 4px;
+}
+
+.apartados {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.apartados h3 {
+    color: var(--color-claro);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.apartados ul {
+    list-style: none;
+    text-align: center;
+}
+
+.apartados ul li {
+    padding: 4px;
+    margin: 2px;
+}
+
+.apartados ul li a {
+    text-decoration: none;
+    color: var(--color-oscuro);
+}
+
+.apartados ul li a:hover {
+    background-color: var(--color-claro);
+    color: var(--color-terceario);
+    padding: 8px;
+    transition: 0.2s ease-in-out;
+}
+
+@media (max-width:1240px) {
+    header img {
+        width: 20vw;
+    }
+
+    .heroImg img {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .heroInformacion {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+    }
+
+    .heroInformacion h1 {
+        font-size: 4rem;
+        margin: 16px 40px;
+    }
+
+    .heroInformacion p {
+        font-size: 1.4rem;
+        margin: 16px 40px;
+    }
+
+    .heroInformacion button {
+        margin: 16px 60px;
+    }
+}
+
+@media (max-width: 837px) {
+    header img {
+        width: 40vw;
+    }
+
+    nav {
+        display: block;
+        position: fixed;
+        right: -300px;
+        width: 300px;
+        background: var(--color-terceario);
+        height: 100%;
+        top: 0;
+        transition: all .4s;
+        z-index: 8;
+    }
+
+    header nav ul {
+        padding: 82px 22px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header nav ul li {
+        display: flex;
+        flex-direction: row;
+        padding: 12px 0;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    header nav ul li:nth-child(-n + 6):hover a:hover{
+        text-decoration: none;
+        background-color: var(--color-claro);
+        color: var(--color-terceario);
+        padding: 8px;
+        transition: 0.2s ease-in-out;
+    }
+
+    span svg.redes {
+        width: 64px;
+        height: 64px;
+    }
+
+    .burger-ico {
+        display: block;
+        cursor: pointer;
+        font-weight: 800;
+        font-size: 20px;
+        z-index: 9;
+        transition: all .4s;
+        height: 40px;
+        width: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        padding: 0 1.5px 3px 1.5px;
+    }
+
+    .burger-active {
+        transform: rotate(-90deg);
+    }
+
+    .show-menu {
+        transform: translateX(-300px);
+    }
+
+    .heroImg img {
+        max-width: 280px;
+        margin: auto;
+    }
+
+    .heroInformacion {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+    }
+
+    .heroInformacion h1 {
+        font-size: 2rem;
+        margin: 16px 0 16px 8px;
+    }
+
+    .heroInformacion p {
+        font-size: 1rem;
+        margin: 16px 0 16px 8px;
+    }
+
+    .heroInformacion button {
+        margin: 16px 20px;
+    }
+
+    .heroInformacion button:hover {
+        background-color: var(--color-claro);
+        color: var(--color-terceario);
+        border: none;
+        margin: 16px 20px;
+        margin-bottom: 32px;
+        box-shadow: var(--color-terceario) 2px 8px;
+        transition: 0.2s ease-in-out;
+    }
+
+
+    .info {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .info article {
+        margin: 24px;
+        gap: 16px;
+    }
+
+    .apartados {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 48px;
+    }
+
+    .apartados h3 {
+        color: var(--color-claro);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .apartados ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    .apartados ul li {
+        padding: 4px;
+        margin: 2px;
+        font-size: 0.8rem;
+    }
+
+    .apartados ul li a {
+        text-decoration: none;
+        color: var(--color-oscuro);
+    }
+
+    footer p {
+        text-align: center;
+        padding: 4px;
+        margin-top: 4px;
+        font-size: 0.8rem;
+    }
+
 }
