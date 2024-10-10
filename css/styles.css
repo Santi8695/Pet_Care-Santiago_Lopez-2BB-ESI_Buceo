@@ -1,0 +1,141 @@
+/*Variables*/
+:root {
+    --color-primario: #A58132;
+    --color-primario-oscuro: #A47F32;
+    --color-secundario: #FCDA93;
+    --color-terceario: #59AB9E;
+    --color-claro: #FBF0DB;
+    --color-intermedio: #919488;
+    --color-oscuro: #000000;
+    --fuente-principal: 400 16px/20px "Poppins", sans-serif;
+    --fuente-general: 100 16px/20px "Losa", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-primario);
+    min-height: 86px;
+}
+
+header img {
+    width: 30%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 24px;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font: var(--fuente-principal);
+    font-size: 1rem;
+}
+
+.hero {
+    background-color: var(--color-primario-oscuro);
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.heroImg {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroImg img {
+    max-width: 800px;
+}
+
+.heroInformacion {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.heroInformacion h1 {
+    color: var(--color-claro);
+    font-size: 7rem;
+    text-align: left;
+    margin: 16px 80px;
+}
+
+.heroInformacion p {
+    color: var(--color-oscuro);
+    font-size: 1.4rem;
+    text-align: left;
+    margin: 16px 80px;
+}
+
+.heroInformacion button {
+    background-color: var(--color-terceario);
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    padding: 0 24px;
+    border: none;
+    margin: 16px 80px;
+}
+
+.info {
+    background-color: var(--color-secundario);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+svg {
+    width: 80px;
+    height: 80px;
+}
+
+.info article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 64px;
+    gap: 20px;
+}
+
+.info article h2 {
+    font: var(--fuente-principal);
+    font-weight: 550;
+    font-size: 2rem;
+}
+
+.info article p {
+    font: var(--fuente-general);
+    color: var(--color-intermedio);
+    font-weight: 550;
+    max-width: 400px;
+    margin: auto;
+}
+
+.info button {
+    background-color: var(--color-terceario);
+    color: white;
+    height: 40px;
+    width: 116px;
+    border-radius: 20px;
+    padding: 0 24px;
+    border: none;
+    margin: auto;
+}
