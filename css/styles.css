@@ -75,6 +75,7 @@ span svg.redes {
 .heroImg {
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 
 .heroImg img {
